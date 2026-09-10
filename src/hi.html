@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silly Test Page</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(45deg, #ff9999, #ffcc99, #99ff99, #99ccff, #ff99ff);
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff0000;
+            text-shadow: 2px 2px #00ff00;
+            font-size: 48px;
+        }
+        .test-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 5px dashed #ff00ff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 15px;
+        }
+        .silly-button {
+            background-color: #ffff00;
+            color: #0000ff;
+            padding: 15px 30px;
+            border: 3px solid #ff0000;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+            transform: rotate(-5deg);
+        }
+        .silly-button:hover {
+            transform: rotate(5deg) scale(1.1);
+            background-color: #ff00ff;
+        }
+        .result {
+            background-color: #ffeeee;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+            font-size: 20px;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎪 SILLY TEST EXTRAVAGANZA 🎪</h1>
+
+    <div class="test-box">
+        <h2>Test 1: Banana Test</h2>
+        <p>How many bananas can fit in a coconut? Let's find out!</p>
+        <button class="silly-button" onclick="bananaTest()">🍌 TEST BANANAS 🍌</button>
+        <div id="result1" class="result"></div>
+    </div>
+
+    <div class="test-box">
+        <h2>Test 2: Unicorn Rainbow Generator</h2>
+        <p>Generate rainbows with unicorn power!</p>
+        <button class="silly-button" onclick="unicornTest()">🦄 MAKE RAINBOWS 🦄</button>
+        <div id="result2" class="result"></div>
+    </div>
+
+    <div class="test-box">
+        <h2>Test 3: Dinosaur Probability Calculator</h2>
+        <p>What are the odds of encountering a T-Rex today?</p>
+        <button class="silly-button" onclick="dinosaurTest()">🦕 CHECK DINO ODDS 🦕</button>
+        <div id="result3" class="result"></div>
+    </div>
+
+    <div class="test-box">
+        <h2>Test 4: Pizza Rotation Speed</h2>
+        <p>How fast does pizza rotate in your browser?</p>
+        <button class="silly-button" onclick="pizzaTest()">🍕 SPIN PIZZA 🍕</button>
+        <div id="result4" class="result"></div>
+    </div>
+
+    <div class="test-box">
+        <h2>Test 5: Random Silly Statement</h2>
+        <p>Generate an absurdly silly statement!</p>
+        <button class="silly-button" onclick="sillyStatement()">✨ MAKE IT SILLY ✨</button>
+        <div id="result5" class="result"></div>
+    </div>
+
+    <script>
+        function bananaTest() {
+            const result = document.getElementById('result1');
+            const bananaCount = Math.floor(Math.random() * 47) + 3;
+            result.textContent = `🎉 AMAZING! You can fit ${bananaCount} bananas in a coconut! (Totally verified)`;
+        }
+
+        function unicornTest() {
+            const result = document.getElementById('result2');
+            const rainbows = ['🌈 Red', '🌈 Orange', '🌈 Yellow', '🌈 Green', '🌈 Blue', '🌈 Indigo', '🌈 Violet'];
+            result.textContent = `Unicorn Power Activated! Generated: ${rainbows.join(' ')}`;
+        }
+
+        function dinosaurTest() {
+            const result = document.getElementById('result3');
+            const odds = (Math.random() * 0.0001).toFixed(8);
+            result.textContent = `🦖 T-Rex Encounter Probability: ${odds}% (Stay vigilant!)`;
+        }
+
+        function pizzaTest() {
+            const result = document.getElementById('result4');
+            const speed = Math.floor(Math.random() * 500) + 100;
+            result.textContent = `🍕 Your pizza is rotating at ${speed} RPM! (Dangerously delicious)`;
+        }
+
+        function sillyStatement() {
+            const result = document.getElementById('result5');
+            const adjectives = ['dancing', 'flying', 'invisible', 'screaming', 'sleeping', 'confused'];
+            const nouns = ['penguins', 'socks', 'unicorns', 'tacos', 'robots', 'llamas'];
+            const verbs = ['juggle', 'skateboard', 'yodel', 'teleport', 'wiggle', 'moonwalk'];
+            
+            const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const noun = nouns[Math.floor(Math.random() * nouns.length)];
+            const verb = verbs[Math.floor(Math.random() * verbs.length)];
+            
+            result.textContent = `A ${adj} ${noun} tried to ${verb} on a Tuesday! 🤪`;
+        }
+
+        console.log('🎪 Welcome to Silly Test Land! 🎪');
+        console.log('May your tests be ridiculous and your code be... well, silly!');
+    </script>
+</body>
+</html>
